@@ -1,1 +1,250 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Arial', sans-serif;
+}
 
+body{
+    background:#f8f9ff;
+    color:#222;
+}
+
+/* HEADER */
+header{
+    background:#062b63;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 8%;
+    position:relative;
+}
+
+/* LOGO */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:75px;
+    height:75px;
+    object-fit:contain;
+}
+
+.logo h1{
+    color:#f5c542;
+    font-size:30px;
+}
+
+.logo p{
+    font-size:13px;
+    color:white;
+}
+
+/* MENU */
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#f5c542;
+}
+
+/* BUTTON */
+.btn{
+    background:#f5c542;
+    color:#062b63;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:white;
+}/* HERO SECTION */
+
+.hero{
+    background:
+    linear-gradient(
+        rgba(6,43,99,0.75),
+        rgba(6,43,99,0.75)
+    ),
+    url("school.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    height:520px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+}
+
+
+.hero-content{
+    max-width:800px;
+}
+
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+    line-height:1.6;
+}
+
+
+.hero .btn{
+    display:inline-block;
+    background:#f5c542;
+    color:#062b63;
+    padding:14px 35px;
+    border-radius:30px;
+    font-size:16px;
+}
+
+
+.hero .btn:hover{
+    background:white;
+}/* ===== COURSES ===== */
+
+#courses{
+    padding:80px 10%;
+    background:#ffffff;
+    text-align:center;
+}
+
+#courses h2{
+    font-size:40px;
+    color:#062b63;
+    margin-bottom:50px;
+}
+
+.card{
+    display:inline-block;
+    width:300px;
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    margin:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.3s;
+    vertical-align:top;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+}
+
+.card h3{
+    color:#d4a017;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.card p{
+    color:#555;
+    line-height:1.7;
+    font-size:16px;
+}/* ===== COURSES ===== */
+
+#courses{
+    padding:80px 10%;
+    background:#ffffff;
+    text-align:center;
+}
+
+#courses h2{
+    font-size:40px;
+    color:#062b63;
+    margin-bottom:50px;
+}
+
+.card{
+    display:inline-block;
+    width:300px;
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    margin:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.3s;
+    vertical-align:top;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+}
+
+.card h3{
+    color:#d4a017;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.card p{
+    color:#555;
+    line-height:1.7;
+    font-size:16px;
+}/* ===== COURSES ===== */
+
+#courses{
+    padding:80px 10%;
+    background:#ffffff;
+    text-align:center;
+}
+
+#courses h2{
+    font-size:40px;
+    color:#062b63;
+    margin-bottom:50px;
+}
+
+.card{
+    display:inline-block;
+    width:300px;
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    margin:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:.3s;
+    vertical-align:top;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+}
+
+.card h3{
+    color:#d4a017;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.card p{
+    color:#555;
+    line-height:1.7;
+    font-size:16px;
+}
