@@ -165,86 +165,65 @@ nav a:hover{
     color:#555;
     line-height:1.7;
     font-size:16px;
-}/* ===== COURSES ===== */
+}/* ===== ADMISSION ===== */
 
-#courses{
+#admission{
+    background:#eef4ff;
     padding:80px 10%;
-    background:#ffffff;
     text-align:center;
 }
 
-#courses h2{
-    font-size:40px;
+#admission h2{
     color:#062b63;
-    margin-bottom:50px;
+    font-size:40px;
+    margin-bottom:30px;
 }
 
-.card{
-    display:inline-block;
-    width:300px;
-    background:#fff;
-    border-radius:18px;
-    padding:30px;
-    margin:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
-    transition:.3s;
-    vertical-align:top;
+#admission p{
+    font-size:18px;
+    margin:10px 0;
+    color:#333;
 }
 
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 40px rgba(0,0,0,.18);
-}
-
-.card h3{
+#admission h3{
     color:#d4a017;
-    margin-bottom:15px;
-    font-size:22px;
+    font-size:28px;
+    margin:25px 0;
 }
 
-.card p{
-    color:#555;
-    line-height:1.7;
-    font-size:16px;
-}/* ===== COURSES ===== */
+/* ===== CONTACT ===== */
 
-#courses{
-    padding:80px 10%;
-    background:#ffffff;
+#contact{
+    background:#062b63;
+    color:white;
+    padding:70px 10%;
     text-align:center;
 }
 
-#courses h2{
-    font-size:40px;
-    color:#062b63;
-    margin-bottom:50px;
+#contact h2{
+    color:#f5c542;
+    font-size:38px;
+    margin-bottom:25px;
 }
 
-.card{
-    display:inline-block;
-    width:300px;
-    background:#fff;
-    border-radius:18px;
-    padding:30px;
-    margin:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
-    transition:.3s;
-    vertical-align:top;
+#contact a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    display:block;
+    margin:10px 0;
 }
 
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 40px rgba(0,0,0,.18);
+#contact a:hover{
+    color:#f5c542;
 }
 
-.card h3{
-    color:#d4a017;
-    margin-bottom:15px;
-    font-size:22px;
-}
+/* ===== FOOTER ===== */
 
-.card p{
-    color:#555;
-    line-height:1.7;
-    font-size:16px;
+footer{
+    background:#03162f;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:15px;
 }
