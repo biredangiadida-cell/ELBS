@@ -1,94 +1,74 @@
-// ===========================
-// ELBS JavaScript
-// ===========================
+/* ==========================
+   ELBS PROFESSIONAL SCRIPT
+========================== */
 
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-
-    const target = document.querySelector(this.getAttribute("href"));
-
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
-  });
-});
-
-// Navbar Shadow
+// Navbar shadow on scroll
 window.addEventListener("scroll", () => {
-
   const navbar = document.querySelector(".navbar");
 
-  if (!navbar) return;
-
-  if (window.scrollY > 30) {
+  if (window.scrollY > 50) {
     navbar.classList.add("active");
   } else {
     navbar.classList.remove("active");
   }
-
 });
 
-// Fade Animation
-const observer = new IntersectionObserver(entries => {
-
-  entries.forEach(entry => {
-
+// Scroll animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
     }
-
   });
-
 }, {
   threshold: 0.15
 });
 
-document.querySelectorAll("section").forEach(section => {
+document.querySelectorAll("section").forEach((section) => {
   section.classList.add("hidden");
   observer.observe(section);
 });
 
-// Counter Animation
-const counters = document.querySelectorAll(".stat-box h3");
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
 
-counters.forEach(counter => {
+    e.preventDefault();
 
-  const text = counter.textContent;
+    const target = document.querySelector(this.getAttribute("href"));
 
-  const target = parseInt(text.replace(/\D/g, ""));
-
-  if (isNaN(target)) return;
-
-  const suffix = text.replace(/[0-9]/g, "");
-
-  let count = 0;
-
-  const speed = Math.ceil(target / 80);
-
-  function update() {
-
-    count += speed;
-
-    if (count >= target) {
-
-      counter.textContent = target + suffix;
-
-    } else {
-
-      counter.textContent = count + suffix;
-
-      requestAnimationFrame(update);
-
+    if(target){
+      target.scrollIntoView({
+        behavior:"smooth"
+      });
     }
 
-  }
+  });
+});
 
-  update();
+// Back To Top Button
+const topBtn = document.createElement("button");
+
+topBtn.innerHTML = "↑";
+topBtn.id = "topBtn";
+
+document.body.appendChild(topBtn);
+
+window.addEventListener("scroll", () => {
+
+  if(window.scrollY > 500){
+    topBtn.style.display = "block";
+  }else{
+    topBtn.style.display = "none";
+  }
 
 });
 
-console.log("ELBS Loaded Successfully");
+topBtn.addEventListener("click", () => {
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+});
