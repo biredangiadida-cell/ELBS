@@ -453,4 +453,17 @@ margin:10px auto;
 
 border-radius:20px;
 
+}.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.navbar.active{
+box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
