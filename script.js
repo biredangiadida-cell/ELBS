@@ -1,10 +1,10 @@
-// =========================
+// ===========================
 // ELBS JavaScript
-// =========================
+// ===========================
 
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener("click", function (e) {
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
     e.preventDefault();
 
     const target = document.querySelector(this.getAttribute("href"));
@@ -17,26 +17,32 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-// Navbar shadow on scroll
+// Navbar Shadow
 window.addEventListener("scroll", () => {
+
   const navbar = document.querySelector(".navbar");
 
   if (!navbar) return;
 
-  if (window.scrollY > 50) {
-    navbar.style.boxShadow = "0 8px 25px rgba(0,0,0,.25)";
+  if (window.scrollY > 30) {
+    navbar.classList.add("active");
   } else {
-    navbar.style.boxShadow = "none";
+    navbar.classList.remove("active");
   }
+
 });
 
-// Fade-in animation
-const observer = new IntersectionObserver((entries) => {
+// Fade Animation
+const observer = new IntersectionObserver(entries => {
+
   entries.forEach(entry => {
+
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
     }
+
   });
+
 }, {
   threshold: 0.15
 });
@@ -46,29 +52,43 @@ document.querySelectorAll("section").forEach(section => {
   observer.observe(section);
 });
 
-// Animated Counters
+// Counter Animation
 const counters = document.querySelectorAll(".stat-box h3");
 
 counters.forEach(counter => {
 
-  const updateCounter = () => {
+  const text = counter.textContent;
 
-    const target = parseInt(counter.innerText.replace(/\D/g, "")) || 0;
-    const current = parseInt(counter.dataset.count || "0");
+  const target = parseInt(text.replace(/\D/g, ""));
 
-    const increment = Math.max(1, Math.ceil(target / 100));
+  if (isNaN(target)) return;
 
-    if (current < target) {
-      const next = Math.min(current + increment, target);
-      counter.dataset.count = next;
-      counter.innerText = counter.innerText.replace(/\d+/, next);
-      setTimeout(updateCounter, 20);
+  const suffix = text.replace(/[0-9]/g, "");
+
+  let count = 0;
+
+  const speed = Math.ceil(target / 80);
+
+  function update() {
+
+    count += speed;
+
+    if (count >= target) {
+
+      counter.textContent = target + suffix;
+
+    } else {
+
+      counter.textContent = count + suffix;
+
+      requestAnimationFrame(update);
+
     }
 
-  };
+  }
 
-  updateCounter();
+  update();
 
 });
 
-console.log("ELBS Website Loaded Successfully");
+console.log("ELBS Loaded Successfully");
