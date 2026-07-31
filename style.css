@@ -1,1 +1,118 @@
+/* ================= RESET ================= */
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f7fb;
+color:#222;
+overflow-x:hidden;
+line-height:1.7;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#0b3d91;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 5%;
+z-index:1000;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+color:#fff;
+}
+
+.logo img{
+width:55px;
+height:55px;
+border-radius:50%;
+}
+
+.logo h2{
+font-size:24px;
+}
+
+.logo p{
+font-size:12px;
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#fff;
+font-weight:600;
+}
+
+.apply-btn{
+background:#FFD700;
+color:#000;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:#355C9A;
+color:#fff;
+padding:20px;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.hero-btn{
+display:inline-block;
+background:#FFD700;
+color:#000;
+padding:15px 35px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
